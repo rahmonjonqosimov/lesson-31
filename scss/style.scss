@@ -182,12 +182,14 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center bottom;
+
       .prodact-content {
         .prodact-items {
           display: flex;
           flex-direction: column;
           align-items: center;
           .prodact-cards {
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             padding-top: 8px;
@@ -263,6 +265,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
         .costumers-image {
         }
         .costumers-text {
@@ -798,6 +801,43 @@ body {
   }
 
   /* MEDIA QUERIES */
+}
+.dark {
+  background: rgb(53, 52, 52);
+  transition: all 0.5s linear;
+}
+.dark * {
+  color: white !important;
+}
+.dark header {
+  background-color: rgb(69, 67, 67);
+}
+.dark .menu-btn span {
+  background-color: #fff;
+}
+.dark #navbar-responsive {
+  background-color: rgb(69, 67, 67);
+}
+.dark #prodact {
+  background: transparent;
+}
+.dark #process {
+  background: transparent;
+}
+.dark main #price .price-content .price-cards .price-card {
+  background: #5a5c64;
+}
+.dark main #price .price-content .price-cards .price-card:hover a button {
+  background: #30a698;
+}
+.dark main #client .client-content .client-cards .client-card {
+  background: #5a5c64;
+}
+.dark main #business .business-content .text button {
+  background: #30a698;
+}
+// RESPONSIVE //////////////////////////////////////////////
+header {
   @media (max-width: 900px) {
     #navbar-responsive {
       position: fixed;
@@ -820,19 +860,138 @@ body {
     }
   }
 }
-.dark {
-  background: rgb(53, 52, 52);
-  transition: all 0.5s linear;
+main {
+  @media (max-width: 1000px) {
+    .home-image img {
+      width: 400px;
+    }
+    #management .management-content .management-image img {
+      width: 400px;
+    }
+    .costumers-image img {
+      width: 400px;
+    }
+    #process .process-content .process-cards .process-card .profil {
+      width: 50px;
+    }
+
+    #process .process-content .process-cards .process-card .fikr {
+      width: 200px;
+    }
+    #process .process-content a button {
+      padding: 10px !important;
+    }
+  }
+  @media (max-width: 935px) {
+    #prodact .prodact-content .prodact-items .prodact-cards {
+      grid-template-columns: repeat(2, 1fr) !important;
+      place-items: center;
+      gap: 30px;
+    }
+  }
+  @media (max-width: 831px) {
+    #home .home-content {
+      flex-direction: column-reverse;
+    }
+    #management .management-content {
+      flex-direction: column-reverse;
+      gap: 30px;
+      margin: 100px 0 !important;
+    }
+    #costumers .costumers-content {
+      flex-direction: column;
+      gap: 30px;
+    }
+    #price .price-content .price-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    #client .client-content .client-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    #client .client-content {
+      margin: 100px 0 !important;
+    }
+    #business .business-content {
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    #process .process-content .process-cards {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 26px !important;
+    }
+    h2 {
+      font-size: 20px !important;
+    }
+    h3 {
+      font-size: 15px !important;
+    }
+    p {
+      font-size: 12px !important;
+    }
+    button {
+      font-size: 12px !important;
+    }
+    #price .price-content .price-cards .price-card .narx h1 {
+      font-size: 50px !important;
+    }
+    .home-image img {
+      width: 250px;
+    }
+    #management .management-content .management-image img {
+      width: 250px;
+    }
+    .costumers-image img {
+      width: 250px;
+    }
+    #process .process-content .process-cards .process-card .profil {
+      width: 30px;
+    }
+
+    #process .process-content .process-cards .process-card .fikr {
+      width: 150px;
+    }
+    #costumers .costumers-content .costumers-text .costumer-support img {
+      width: 20px;
+    }
+    #costumers .costumers-content .costumers-text .costumer-support {
+      gap: 10px !important;
+    }
+    #prodact .prodact-content .prodact-items .prodact-cards .prodact-card img {
+      width: 40px;
+    }
+    #prodact .prodact-content .prodact-items .prodact-cards {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @media (max-width: 380px) {
+    #home .home-content .home-text .buttons {
+      justify-content: center;
+    }
+  }
 }
-.dark * {
-  color: white !important;
-}
-.dark header {
-  background-color: rgb(69, 67, 67);
-}
-.dark .menu-btn span {
-  background-color: #fff;
-}
-.dark #navbar-responsive {
-  background-color: rgb(69, 67, 67);
+footer {
+  @media (max-width: 800px) {
+    .footer-content .footer-cards {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      place-items: start center;
+      gap: 30px;
+      margin-bottom: 30px !important ;
+    }
+  }
+  @media (max-width: 500px) {
+    .footer-content .footer-cards {
+      grid-template-columns: 1fr !important;
+      place-items: center !important;
+    }
+  }
 }
