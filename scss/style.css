@@ -800,6 +800,10 @@ body .menu-btn span {
   background: #30a698;
 }
 
+.dark #business .business-content {
+  background: #5a5c64;
+}
+
 @media (max-width: 900px) {
   header #navbar-responsive {
     position: fixed;
